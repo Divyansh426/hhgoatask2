@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Eczar:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #0B1E22;
+  font-family: "Inter", sans-serif;
+}
+
+@keyframes idle-breathe {
+  0%, 100% { transform: scaleY(0.25); }
+  50% { transform: scaleY(0.9); }
+}
+
+@keyframes shimmer-sweep {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes ring-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(79, 179, 172, 0.45); }
+  100% { box-shadow: 0 0 0 28px rgba(79, 179, 172, 0); }
+}
+
+.bar-idle {
+  animation: idle-breathe 2.4s ease-in-out infinite;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #122B30 25%, #8A3B22 50%, #122B30 75%);
+  background-size: 200% 100%;
+  animation: shimmer-sweep 1.4s linear infinite;
+}
